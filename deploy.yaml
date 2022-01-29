@@ -3,8 +3,8 @@
   hosts: app
   become: yes
   tasks:
-   - name: deploy files
-     copy:
+  - name: deploy files
+    copy:
        src: '{{ item }}'
        dest: /var/lib/tomcat/webapps
-       with_fileglob: "target/hello-*.war"
+    with_fileglob: "target/hello-*.war"
