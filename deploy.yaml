@@ -5,6 +5,6 @@
   tasks:
    - name: deploy files
      copy:
-       src: '{{ item }}''
+       src: '{{ item }}'
        dest: /var/lib/tomcat/webapps
        with_fileglob: "target/hello-*.war"
